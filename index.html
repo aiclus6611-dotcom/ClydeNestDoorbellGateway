@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NestDoorbellGateway：個人使用的 Google Nest 門鈴事件整合、Windows 閘道及 Android 時鐘通知專案。包含專案介紹、隱私權政策與使用條款。">
+  <meta name="color-scheme" content="dark light">
+  <title>NestDoorbellGateway｜首頁・隱私權政策・服務條款</title>
+  <style>
+    :root { color-scheme: dark; --bg:#0b1018; --panel:#151d29; --line:#303e50; --text:#edf3fa; --muted:#b9c7d8; --accent:#8cceff; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:88px; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,"Microsoft JhengHei","Noto Sans TC",sans-serif; line-height:1.85; }
+    a { color:var(--accent); overflow-wrap:anywhere; }
+    a:hover, a:focus-visible { text-decoration-thickness:2px; }
+    .wrap { width:min(100% - 36px,940px); margin-inline:auto; }
+    header { position:sticky; top:0; z-index:10; background:rgba(11,16,24,.96); border-bottom:1px solid var(--line); }
+    .head { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; padding:12px 0; }
+    .brand { font-size:1.04rem; font-weight:750; color:#fff; text-decoration:none; }
+    nav { display:flex; flex-wrap:wrap; gap:8px; }
+    nav a { text-decoration:none; border:1px solid var(--line); padding:5px 12px; border-radius:30px; font-size:.92rem; }
+    nav a:hover, nav a:focus-visible { background:#283648; }
+    main { padding:35px 0 54px; }
+    .hero { background:linear-gradient(150deg,#1d3147,var(--panel)); border:1px solid var(--line); border-radius:20px; padding:34px 28px; }
+    .eyebrow { color:var(--accent); letter-spacing:.12em; font-size:.82rem; font-weight:700; }
+    h1 { font-size:clamp(1.8rem,4vw,2.8rem); line-height:1.3; margin:8px 0 14px; }
+    .lead { color:var(--muted); font-size:1.08rem; margin-bottom:0; }
+    section { margin-top:26px; padding:28px; border:1px solid var(--line); border-radius:16px; background:var(--panel); }
+    h2 { font-size:1.5rem; margin:0 0 14px; line-height:1.45; }
+    h3 { font-size:1.1rem; margin:22px 0 6px; }
+    p { margin:9px 0 14px; }
+    ul,ol { padding-left:1.55rem; }
+    li { margin:7px 0; }
+    .muted, .small { color:var(--muted); }
+    .small { font-size:.9rem; }
+    .notice { border-left:3px solid var(--accent); padding:12px 16px; background:#203047; border-radius:0 8px 8px 0; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:20px 0; }
+    .tile { border:1px solid var(--line); border-radius:12px; padding:12px; background:#111a27; }
+    .tile strong { display:block; }
+    code { color:#c0edff; font-size:.94em; overflow-wrap:anywhere; }
+    footer { border-top:1px solid var(--line); padding:26px 0 45px; color:var(--muted); font-size:.9rem; }
+    @media(max-width:650px) { .grid { grid-template-columns:1fr; } .hero,section { padding:22px 18px; } .head { align-items:flex-start; } }
+    @media print { header { position:static; } body { background:white; color:black; } section,.hero { color:black; border-color:#aaa; background:white; } a { color:#114488; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap head">
+      <a class="brand" href="#home">NestDoorbellGateway</a>
+      <nav aria-label="網站導覽">
+        <a href="#home">專案首頁</a>
+        <a href="#privacy">隱私權政策</a>
+        <a href="#terms">服務條款</a>
+        <a href="#contact">聯絡方式</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="hero" id="home">
+      <div class="eyebrow">PRIVATE HOME AUTOMATION PROJECT</div>
+      <h1>NestDoorbellGateway</h1>
+      <p class="lead">個人自用的 Google Nest 門鈴事件整合工具，透過 Windows 電腦上的本機閘道，協助 Android 時鐘裝置接收門鈴通知，並視設定開啟 Google Home App、Google Home 網頁或支援的攝影機即時畫面。</p>
+      <p class="small">本專案為獨立開發的私人用途工具，並非 Google LLC 或 Google Nest 官方推出、贊助或認證的產品。</p>
+    </div>
+
+    <section aria-labelledby="about-title">
+      <h2 id="about-title">專案介紹與用途</h2>
+      <div class="grid">
+        <div class="tile"><strong>多門鈴辨識</strong><span class="small">取得已授權的 Nest 裝置資訊，接收門鈴按壓事件。</span></div>
+        <div class="tile"><strong>Windows 閘道</strong><span class="small">在使用者自己的 Windows 電腦運作，將事件送往區域網路內的 Android 裝置。</span></div>
+        <div class="tile"><strong>Android 待機時鐘</strong><span class="small">平時顯示時鐘；收到事件後，依設定開啟相應的觀看介面。</span></div>
+      </div>
+      <p>使用者需自行擁有或管理相容的 Google Nest 裝置、Google 帳號與授權設定。影像串流、按鈴事件或 Google Home 畫面開啟功能是否可用，取決於裝置型號、Google API 權限及 Android 系統限制。</p>
+      <p>若透過 Google Home 官方 App 或網站進行麥克風雙向對話，該功能由 Google Home 提供，並非本專案自行提供門鈴語音回傳 API。</p>
+      <p class="notice">本網站主要用於說明專案、隱私權政策和服務條款；本網站本身不會要求你輸入 Google 密碼、OAuth Client Secret、Refresh Token 或門鈴配對金鑰。</p>
+    </section>
+
+    <section id="privacy" aria-labelledby="privacy-title">
+      <h2 id="privacy-title">隱私權政策（Privacy Policy）</h2>
+      <p class="small">最後更新日期：2026 年 10 月 17 日</p>
+      <p>本政策說明 NestDoorbellGateway（包含 Windows Nest API 閘道與配套 Android 時鐘 App）如何在使用者授權下存取、使用、保存及刪除資料。此專案主要供開發者本人與獲准使用的家庭成員於私人環境中使用。</p>
+
+      <h3>1. 可能存取的資料</h3>
+      <ul>
+        <li><strong>Google 授權資訊：</strong>OAuth 用戶端設定、授權取得的存取權杖及更新權杖，用於向 Google Smart Device Management（SDM）API 請求已授權資料。</li>
+        <li><strong>裝置資料：</strong>已授權 Nest 裝置的識別碼、名稱、類型及可用的相機／門鈴功能。</li>
+        <li><strong>門鈴事件：</strong>按鈴事件對應的裝置識別碼、事件識別資訊及時間，用於通知指定的 Android 裝置。</li>
+        <li><strong>攝影機影音：</strong>只有使用者主動啟用且裝置/API 支援時，才可能建立短暫的即時影像或接收音訊連線；並不表示所有裝置都支援。</li>
+        <li><strong>Android 本機資訊：</strong>時鐘外觀設定、選擇的門鈴動作、API 閘道網址、配對資訊及排錯所需的近期通知狀態。若授予 Android 通知存取權限，系統層級會讓服務取得通知資訊，程式預定用於辨識 Google Home 相關通知。</li>
+      </ul>
+
+      <h3>2. 使用目的與限制</h3>
+      <p>上述資料僅用於：辨識已授權的門鈴、接收按鈴事件、在私人網路通知使用者、依使用者設定顯示相關影像或開啟 Google Home，以及故障排除。本專案不以 Google Nest 資料建立廣告輪廓，不出售使用者資料，也不將資料提供給資料經紀商。</p>
+      <p>從 Google API 取得的資料僅用於使用者明確授權的功能，不會轉作與門鈴通知或裝置管理無關的用途。若日後擴增收集或使用方式，應先更新本政策並取得必要的使用者同意。</p>
+
+      <h3>3. 儲存位置與保留時間</h3>
+      <ul>
+        <li>OAuth Client Secret、Refresh Token 及閘道配對金鑰等私人設定，保存在使用者自行管理的 Windows 電腦設定檔中；請勿將該檔案上傳公開儲存庫。</li>
+        <li>Windows 閘道目前以記憶體緩存近期按鈴事件（最多約 400 筆），供 Android 平板讀取；服務重啟會清空此記憶體緩存。</li>
+        <li>Android 時鐘的個人化設定與診斷資訊可能保存在該裝置的本機 App 資料中，直到使用者清除資料、解除安裝或自行刪除相關備份。</li>
+        <li>Google Cloud Pub/Sub 內的訊息以及使用者自行建立的備份，其保存期間依使用者在相應平台的設定而定，不受本機緩存上限限制。</li>
+      </ul>
+
+      <h3>4. 網路傳輸與第三方服務</h3>
+      <p>Windows 閘道會透過 HTTPS 呼叫 Google OAuth、SDM API 與 Google Cloud Pub/Sub。Android 與 Windows 閘道之間可使用私人區域網路 HTTP；<strong>若使用 HTTP，該段連線並未加密</strong>，應僅在受信任的私人網路使用，避免將閘道直接開放到公共網際網路。如需遠端使用，應另行設置 HTTPS 或受保護的 VPN。</p>
+      <p>若選擇使用 Google Home App／網頁進行觀看或對講，相關 Google 帳號登入、攝影機及麥克風作業由 Google 服務處理，並受 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google 隱私權政策</a>規範。若本頁部署在 GitHub Pages，網站託管端可能依其自身政策處理連線紀錄；本頁不包含第三方追蹤或廣告腳本。</p>
+
+      <h3>5. 資料分享與安全</h3>
+      <p>本專案不設立集中式雲端資料庫以收集各家庭的門鈴資料。裝置資訊會為實現功能，在使用者授權下經 Google API、使用者自行設定的 Google Cloud 專案、Windows 閘道和已配對的 Android 裝置之間流動。使用者應妥善保護 Windows 系統帳號、API 私鑰、配對金鑰及內部網路。沒有任何網路或儲存方式能保證絕對安全。</p>
+
+      <h3>6. 如何撤銷授權或刪除資料</h3>
+      <ol>
+        <li>可至 <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener noreferrer">Google 帳號的第三方連線管理</a>撤銷本專案授權，或在 Device Access 的授權管理介面移除存取。</li>
+        <li>停止 Windows 閘道，備份必要資料後刪除本機的 <code>gateway_config.json</code>、私人金鑰及不再需要的備份；先確認檔案所在位置，勿誤刪其他專案設定。</li>
+        <li>在 Android 系統設定中清除本 App 的本機資料，或解除安裝 App；如需保留時鐘配置，請先使用 App 支援的備份方式。</li>
+        <li>如已自行建立 Pub/Sub 訂閱或其他 Google Cloud 資源，可到自己的 Google Cloud 專案停用或刪除不再需要的資源，並檢查相關費用設定。</li>
+      </ol>
+
+      <h3>7. 政策更新與聯絡</h3>
+      <p>功能或資料處理方式如有重大變更，維護者應在實施前更新本頁並提供適當通知。若對資料使用、權限或刪除方式有疑問，請使用頁面下方的聯絡方式。</p>
+    </section>
+
+    <section id="terms" aria-labelledby="terms-title">
+      <h2 id="terms-title">服務條款（Terms of Service）</h2>
+      <p class="small">最後更新日期：2026 年 10 月 17 日</p>
+      <h3>1. 服務性質</h3>
+      <p>NestDoorbellGateway 是獨立開發、供私人家庭自動化使用的軟體。它不是 Google 或 Nest 的官方服務，也不是緊急警報系統、保全監控承諾或人身安全裝置。</p>
+      <h3>2. 使用條件</h3>
+      <p>使用者應擁有相關設備或取得合法管理權限，並遵守 Google API、Google Cloud、Google Home 及適用的法律、隱私與錄影規範。使用者須自行完成 Google 帳號授權及雲端專案設定，並管理主機、平板與網路安全。</p>
+      <h3>3. 功能與可用性</h3>
+      <p>部分功能受 Nest 裝置型號、Google Device Access 權限、Google Home 更新、Google Cloud 事件延遲、網路狀況及 Android 背景啟動政策影響。軟體不保證每次按鈴都能成功自動打開指定攝影機，也不保證雙向語音能透過自行開發的 API 運作。</p>
+      <h3>4. 費用</h3>
+      <p>本專案本身未向使用者收取訂閱費。Google Device Access、Google Cloud、網路、電力或第三方服務可能依其官方條款產生註冊費或使用費；使用者應自行確認及負擔。</p>
+      <h3>5. 使用責任與風險</h3>
+      <p>本軟體依實際提供狀態供使用者測試與使用。使用者應先驗證門鈴通知、影像觀看、麥克風及返回時鐘等功能是否符合實際需求；不可單獨依賴本工具處理緊急事故。對於法律不得排除的責任，不受本條款限制。</p>
+      <h3>6. 停用與終止</h3>
+      <p>使用者可停止 Windows 程式、關閉 Android App、撤銷 Google OAuth 授權或移除自有 Google Cloud 資源，以停止使用本工具；資料刪除方式請參閱上方<a href="#privacy">隱私權政策</a>。</p>
+      <h3>7. 條款變更</h3>
+      <p>若功能、法規或第三方 API 條件變更，維護者可能更新本條款。頁面將標示最新更新日期。</p>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">開發者及聯絡方式</h2>
+      <p><strong>專案名稱：</strong>NestDoorbellGateway</p>
+      <p><strong>維護者：</strong>〔上線前請填入開發者名稱或個人識別名稱〕</p>
+      <p><strong>聯絡電子郵件：</strong><a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></p>
+      <p class="small">重要：正式公開前，務必將上面兩個占位文字改成你實際使用的維護者名稱與可接收信件的電子郵件，並重新確認本頁描述與目前程式功能一致。</p>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      © 2026 NestDoorbellGateway｜私人家庭自動化專案。<br>
+      <a href="#home">回首頁</a> · <a href="#privacy">隱私權政策</a> · <a href="#terms">服務條款</a>。Google、Google Home 與 Nest 為其各自權利人的商標。
+    </div>
+  </footer>
+</body>
+</html>
